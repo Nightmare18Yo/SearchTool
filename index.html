@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web Search</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        #searchForm {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
+            width: 300px;
+            text-align: center; /* Center the form */
+        }
+
+        input[type="text"] {
+            width: 80%; /* Reduce the width of the input field */
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            display: block; /* Display the input field as a block */
+            margin: 0 auto; /* Center the input field within the form */
+        }
+
+        input[type="button"] {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        input[type="button"]:hover {
+            background-color: #0056b3;
+        }
+
+        #searchResults {
+            width: 100%;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Perform a Web Search</h1>
+    <form id="searchForm">
+        <input type="text" id="searchQuery" placeholder="Enter your search query">
+        <input type="button" value="Search" onclick="performSearch()">
+    </form>
+    <iframe id="searchResults" name="searchResults"></iframe>
+
+    <script>
+        function performSearch() {
+            var query = document.getElementById("searchQuery").value;
+            window.location.href = "search?q=" + query;
+        }
+    </script>
+</body>
+</html>
+
+
+
+
